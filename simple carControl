@@ -1,0 +1,23 @@
+using UnityEngine;
+using System.Collections;
+
+public class carControl : MonoBehaviour{
+
+	public float moveSpeed = 10;
+	public float turnSpeed = 3;
+
+	void Update(){
+		float forward = Input.GetAxis ("Vertical") * moveSpeed;
+		rigidbody.AddRelativeForce (forward, 0, 0);
+		float turn = Input.GetAxis ("Horizontal") * turnSpeed;
+		this.transform.Rotate (0, turn, 0);
+
+
+	}
+
+
+
+
+
+
+}
